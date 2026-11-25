@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             lblMail = new Label();
-            textMail = new TextBox();
+            txtEmail = new TextBox();
             lblPin = new Label();
-            textPin = new TextBox();
+            textParola = new TextBox();
             btnIntra = new Button();
             pnlSigla = new Panel();
             lblOnlineSchool = new Label();
@@ -47,12 +47,13 @@
             lblMail.TabIndex = 0;
             lblMail.Text = "Email";
             // 
-            // textMail
+            // txtEmail
             // 
-            textMail.Location = new Point(52, 201);
-            textMail.Name = "textMail";
-            textMail.Size = new Size(125, 27);
-            textMail.TabIndex = 1;
+            txtEmail.Location = new Point(52, 201);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(125, 27);
+            txtEmail.TabIndex = 1;
+            txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // lblPin
             // 
@@ -63,13 +64,13 @@
             lblPin.TabIndex = 2;
             lblPin.Text = "Parola";
             // 
-            // textPin
+            // textParola
             // 
-            textPin.Location = new Point(52, 266);
-            textPin.Name = "textPin";
-            textPin.PasswordChar = '*';
-            textPin.Size = new Size(125, 27);
-            textPin.TabIndex = 4;
+            textParola.Location = new Point(52, 266);
+            textParola.Name = "textParola";
+            textParola.PasswordChar = '*';
+            textParola.Size = new Size(125, 27);
+            textParola.TabIndex = 4;
             // 
             // btnIntra
             // 
@@ -78,8 +79,9 @@
             btnIntra.Size = new Size(94, 29);
             btnIntra.TabIndex = 5;
             btnIntra.Tag = " ";
-            btnIntra.Text = "Intra";
+            btnIntra.Text = "Login";
             btnIntra.UseVisualStyleBackColor = true;
+            btnIntra.Click += btnIntra_Click;
             // 
             // pnlSigla
             // 
@@ -107,12 +109,12 @@
             Controls.Add(lblOnlineSchool);
             Controls.Add(pnlSigla);
             Controls.Add(btnIntra);
-            Controls.Add(textPin);
+            Controls.Add(textParola);
             Controls.Add(lblPin);
-            Controls.Add(textMail);
+            Controls.Add(txtEmail);
             Controls.Add(lblMail);
             Name = "FormLogin";
-            Text = "s";
+            Text = "Login";
             Load += FormPrincipal_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -121,9 +123,9 @@
         #endregion
 
         private Label lblMail;
-        private TextBox textMail;
+        private TextBox txtEmail;
         private Label lblPin;
-        private TextBox textPin;
+        private TextBox textParola;
         private Button btnIntra;
         private Panel pnlSigla;
         private Label lblOnlineSchool;

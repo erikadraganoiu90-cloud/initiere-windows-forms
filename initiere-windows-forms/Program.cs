@@ -6,7 +6,7 @@ namespace initiere_windows_forms
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormLogin());
+            Application.Run(new FormaPrincipala(new Student("Maria", "Popescu", "maria.popescu@mail.ro", "maria123", 17)));
         }
     }
 }
